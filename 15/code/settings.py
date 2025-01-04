@@ -2,7 +2,7 @@
 WIDTH    = 1280	
 HEIGTH   = 720
 FPS      = 60
-TILESIZE = 64
+TILESIZE = 64 # Size of the tiles(object) in the game
 HITBOX_OFFSET = {
 	'player': -26,
 	'object': -40,
