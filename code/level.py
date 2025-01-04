@@ -20,6 +20,8 @@ class Level:
 		self.game_paused = False
 
 		# sprite group setup
+		# visible sprites is for the sprites that are visible on the screen
+		# obstacle sprites is for the sprites that can collide with the player
 		self.visible_sprites = YSortCameraGroup()
 		self.obstacle_sprites = pygame.sprite.Group()
 
@@ -55,6 +57,7 @@ class Level:
 			for row_index,row in enumerate(layout):
 				for col_index, col in enumerate(row):
 					if col != '-1':
+						# get the actual position of the tile
 						x = col_index * TILESIZE
 						y = row_index * TILESIZE
 						if style == 'boundary':
@@ -145,6 +148,7 @@ class Level:
 		self.game_paused = not self.game_paused 
 
 	def run(self):
+		# update and draw the game
 		self.visible_sprites.custom_draw(self.player)
 		self.ui.display(self.player)
 		

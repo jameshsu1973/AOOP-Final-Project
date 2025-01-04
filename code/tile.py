@@ -6,7 +6,9 @@ class Tile(pygame.sprite.Sprite):
 		super().__init__(groups)
 		self.sprite_type = sprite_type
 		y_offset = HITBOX_OFFSET[sprite_type]
+		# self.image = pygame.image.load('../graphics/test/rock.png').convert_alpha()
 		self.image = surface
+		# Give the tile it's position whew creating it
 		if sprite_type == 'object':
 			self.rect = self.image.get_rect(topleft = (pos[0],pos[1] - TILESIZE))
 		else:
