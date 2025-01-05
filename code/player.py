@@ -42,17 +42,19 @@ class Player(Entity):
 		self.upgrade_cost = {'health': 100, 'energy': 100, 'attack': 100, 'magic' : 100, 'speed': 100}
 		self.health = self.stats['health']
 		self.energy = self.stats['energy']
-		self.exp = 5000
+		self.exp = 500
 		self.speed = self.stats['speed']
 
 		# damage timer
 		self.vulnerable = True
 		self.hurt_time = None
-		self.invulnerability_duration = 500
+		self.invulnerability_duration = 300
 
 		# import a sound
 		self.weapon_attack_sound = pygame.mixer.Sound('../audio/sword.wav')
 		self.weapon_attack_sound.set_volume(0.4)
+
+		self.is_dead = False
 
 	def import_player_assets(self):
 		character_path = '../graphics/player/'
@@ -131,6 +133,21 @@ class Player(Entity):
 		if self.direction.x == 0 and self.direction.y == 0:
 			if not 'idle' in self.status and not 'attack' in self.status:
 				self.status = self.status + '_idle'
+
+		#hp check
+		if self.health <= 0:
+			self.is_dead = True
+			#show game over screen
+			# font = pygame.font.Font(None, 74)
+			# text = font.render('You Died', True, (255, 0, 0))
+			# text_rect = text.get_rect(center=(self.rect.centerx, self.rect.centery - 50))
+			# screen = pygame.display.get_surface()
+			# screen.blit(text, text_rect)
+			# pygame.display.flip()
+			# pygame.time.wait(2000)
+			# # pygame.quit()
+			# #exit()
+
 
 		if self.attacking:
 			self.direction.x = 0
