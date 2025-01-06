@@ -16,7 +16,7 @@ class Player(Entity):
 
 		# movement 
 		self.attacking = False
-		self.attack_cooldown = 400
+		self.attack_cooldown = 300
 		self.attack_time = None
 		self.obstacle_sprites = obstacle_sprites
 
@@ -48,7 +48,7 @@ class Player(Entity):
 		# damage timer
 		self.vulnerable = True
 		self.hurt_time = None
-		self.invulnerability_duration = 300
+		self.invulnerability_duration = 500
 
 		# import a sound
 		self.weapon_attack_sound = pygame.mixer.Sound('../audio/sword.wav')
