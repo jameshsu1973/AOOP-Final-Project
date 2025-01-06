@@ -1,5 +1,6 @@
 # 2024 AOOP-Final-Project
 Group 10-Dark-soul like rpg
+![](Diagram/rChr9uZL.jpg)
 ---
 ## Installation
 * pygame
