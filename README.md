@@ -30,6 +30,11 @@ Group 10-Dark-soul like rpg
 |←→|Choose the ability want to level up|
 |Space|Level up the ability|
 
+## Diagram
+### Class diagram
+![](Diagram/Class_diagram.png)
+### Flow chart
+![](Diagram/Flow_chart.png)
 ## Report
 [canvas page](https://www.canva.com/design/DAGbT5yKQDs/KIOhy--mSXLM4HQWmXuw4w/edit?ui=eyJEIjp7IlAiOnsiQiI6ZmFsc2V9fX0)
 
